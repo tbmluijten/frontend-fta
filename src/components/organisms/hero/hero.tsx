@@ -1,14 +1,12 @@
-import Image from 'next/image';
-
 import {
   ArrowRight,
   Button,
   Container,
   Document,
+  FloatingBadge,
   Gavel,
 } from '@/components/atoms';
-
-import { FloatingBadge } from './floating-badge/floating-badge';
+import { Media } from '@/components/molecules';
 
 type HeroProps = {
   heroImageSrc?: string;
@@ -75,19 +73,8 @@ export const Hero = ({
             </div>
           </div>
 
-          {/* Right: Image with floating badges */}
+          {/* Right: Media with floating badges (parent for positioning) */}
           <div className="relative flex-1">
-            <div className="relative aspect-4/3 overflow-hidden rounded-2xl border-8 border-[#889fd671] shadow-lg lg:aspect-auto lg:h-[524px]">
-              <Image
-                src={heroImageSrc}
-                alt={heroImageAlt}
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                priority
-              />
-            </div>
-
             <FloatingBadge
               title="Free"
               subtitle="Case Review"
@@ -102,6 +89,7 @@ export const Hero = ({
               variant="primary"
               position="bottom-right"
             />
+            <Media src={heroImageSrc} alt={heroImageAlt} desktopHeight={524} />
           </div>
         </div>
       </Container>

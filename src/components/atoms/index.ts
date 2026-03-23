@@ -1,6 +1,11 @@
 export { ArrowRight } from './icons/arrow-right';
 export { Button } from './button/button';
-export { Document } from './icons/document';
-export { Gavel } from './icons/gavel';
 export { Container } from './container/container';
+export { Document } from './icons/document';
 export { Example } from './example/example';
+export { Eye } from './icons/eye';
+export { Fist } from './icons/fist';
+export { FloatingBadge } from './floating-badge/floating-badge';
+export { Gavel } from './icons/gavel';
+export { Shield } from './icons/shield';
+export { Star } from './icons/star';

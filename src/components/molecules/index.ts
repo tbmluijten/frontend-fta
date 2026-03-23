@@ -1,1 +1,1 @@
-// Molecules – export when added
+export { Media } from './media/media';
