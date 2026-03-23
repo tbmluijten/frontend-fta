@@ -8,6 +8,7 @@ import {
 } from '@/components/atoms';
 import { Media } from '@/components/molecules';
 import { ContentMediaSection } from '@/components/templates';
+import { PLACEHOLDER_IMAGE_URL } from '@/lib/constants';
 
 type ValueItem = {
   icon: React.ReactNode;
@@ -42,7 +43,7 @@ type CoreValuesProps = {
 };
 
 export const CoreValues = ({
-  imageSrc = '/core-values/core-values-placeholder.svg',
+  imageSrc = PLACEHOLDER_IMAGE_URL,
   imageAlt = 'Professional consultation setting',
 }: CoreValuesProps) => {
   const mediaSlot = (

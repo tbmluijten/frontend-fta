@@ -7,6 +7,7 @@ import {
   Gavel,
 } from '@/components/atoms';
 import { Media } from '@/components/molecules';
+import { PLACEHOLDER_IMAGE_URL } from '@/lib/constants';
 
 type HeroProps = {
   heroImageSrc?: string;
@@ -14,7 +15,7 @@ type HeroProps = {
 };
 
 export const Hero = ({
-  heroImageSrc = '/hero/hero-placeholder.svg',
+  heroImageSrc = PLACEHOLDER_IMAGE_URL,
   heroImageAlt = 'Person seeking support',
 }: HeroProps) => {
   return (

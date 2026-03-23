@@ -1,4 +1,5 @@
 import {
+  Cases,
   CoreValues,
   Hero,
   HowItWorks,
@@ -13,6 +14,7 @@ export default function Home() {
         <CoreValues />
         <HowItWorks />
         <Stories />
+        <Cases />
       </main>
     </div>
   );

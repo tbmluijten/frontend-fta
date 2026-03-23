@@ -1,6 +1,7 @@
 import { Button } from '@/components/atoms';
 import { Media, StepCard } from '@/components/molecules';
 import { ContentMediaSection } from '@/components/templates';
+import { PLACEHOLDER_IMAGE_URL } from '@/lib/constants';
 
 const steps = [
   {
@@ -32,7 +33,7 @@ type HowItWorksProps = {
 };
 
 export const HowItWorks = ({
-  imageSrc = '/how-it-works/how-it-works-placeholder.svg',
+  imageSrc = PLACEHOLDER_IMAGE_URL,
   imageAlt = 'Professional consultation',
 }: HowItWorksProps) => {
   const badge = (
