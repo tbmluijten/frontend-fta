@@ -31,7 +31,7 @@ type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-primary text-white shadow-[0_4px_14px_rgba(10,16,82,0.25)] hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2',
+    'bg-primary text-white shadow-[0_4px_14px_rgba(15,16,95,0.25)] hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2',
   secondary:
     'bg-transparent text-black border border-zinc-300 hover:bg-zinc-50 hover:border-zinc-400 focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2',
   tertiary:

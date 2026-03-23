@@ -38,6 +38,7 @@ export const Hero = ({
               <span className="relative inline-block text-primary-green">
                 Organizational Harm
                 <svg
+                className="hidden lg:block"
                   width="489"
                   height="10"
                   viewBox="0 0 489 10"

@@ -1,1 +1,1 @@
-// Templates for page layouts - export when added
+export { ContentMediaSection } from './content-media-section/content-media-section';

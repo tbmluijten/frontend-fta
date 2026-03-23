@@ -7,5 +7,6 @@ export { Eye } from './icons/eye';
 export { Fist } from './icons/fist';
 export { FloatingBadge } from './floating-badge/floating-badge';
 export { Gavel } from './icons/gavel';
+export { Quote } from './icons/quote';
 export { Shield } from './icons/shield';
 export { Star } from './icons/star';
