@@ -91,7 +91,7 @@ export const CoreValues = ({
           </li>
         ))}
       </ul>
-      <Button variant="primary" href="/case-review" className="max-w-[220px]">
+      <Button variant="primary" href="/case-review">
         Free Case Review
       </Button>
     </>

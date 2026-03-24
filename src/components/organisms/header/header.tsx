@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 import { Button, Container } from '@/components/atoms';
@@ -9,6 +10,9 @@ import { Button, Container } from '@/components/atoms';
 const SCROLL_THRESHOLD = 10;
 
 export const Header = () => {
+  const pathname = usePathname();
+  const isWwffyjTheme =
+    pathname === '/wwffyj' || pathname?.startsWith('/wwffyj/');
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -25,7 +29,7 @@ export const Header = () => {
     <header
       className={`top-0 z-50 w-full transition-colors duration-300 ease-in-out ${
         isScrolled ? 'bg-white sticky' : 'bg-none absolute'
-      }`}
+      } ${isWwffyjTheme ? 'font-alexandria' : ''}`}
       role="banner"
     >
       <Container className="flex items-center justify-between !py-4 lg:!py-6">
@@ -35,16 +39,23 @@ export const Header = () => {
           aria-label="For The Abused - Home"
         >
           <Image
-            src="/logo/fortheabused.png"
+            src={
+              isWwffyjTheme
+                ? '/logo/logo-wwffyj.png'
+                : '/logo/fortheabused.png'
+            }
             alt="For The Abused - Justice Starts Here"
-            width={200}
-            height={48}
+            width={isWwffyjTheme ? 114 : 332}
+            height={isWwffyjTheme ? 110 : 80}
             priority
             className="h-12 w-auto object-contain"
           />
         </Link>
-        <Button variant="primary" href="/case-review">
-          Free Case Review
+        <Button
+          variant="primary"
+          href={isWwffyjTheme ? '/eligibility' : '/case-review'}
+        >
+          {isWwffyjTheme ? 'Check My Eligibility' : 'Free Case Review'}
         </Button>
       </Container>
     </header>

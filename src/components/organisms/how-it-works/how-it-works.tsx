@@ -63,7 +63,7 @@ export const HowItWorks = ({
         <span className="font-bold text-accent">clarity</span> and{' '}
         <span className="font-bold text-primary-green">support</span>.
       </p>
-      <Button variant="primary" href="/case-review" className="max-w-[280px]">
+      <Button variant="primary" href="/case-review">
         Start My Free Case Review
       </Button>
     </>

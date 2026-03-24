@@ -1,10 +1,15 @@
-export { Banner } from './banner/banner';
-export { Cases } from './cases/cases';
+export { Banner, type BannerVariant } from './banner/banner';
+export { Cases, type CasesTheme } from './cases/cases';
 export { CoreValues } from './core-values/core-values';
-export { FAQ } from './faq/faq';
+export { FAQ, type FAQTheme } from './faq/faq';
 export { Footer } from './footer/footer.component';
 export { Header } from './header/header';
-export { Hero } from './hero/hero';
+export { Hero, type HeroTheme } from './hero/hero';
 export { HowItWorks } from './how-it-works/how-it-works';
-export { Stories } from './stories/stories';
-export { USP } from './usp/usp';
+export { JusticeSteps } from './justice-steps/justice-steps';
+export {
+  MediaHighlight,
+  type MediaHighlightVariant,
+} from './media-highlight/media-highlight';
+export { Stories, type StoriesTheme } from './stories/stories';
+export { USP, type USPTheme } from './usp/usp';

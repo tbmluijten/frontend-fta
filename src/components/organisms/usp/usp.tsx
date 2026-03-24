@@ -7,9 +7,23 @@ const ITEMS = [
   { title: 'Free', subtitle: 'Case review & consultation' },
 ] as const;
 
-export const USP = () => {
+export type USPTheme = 'default' | 'wwffyj';
+
+type USPProps = {
+  theme?: USPTheme;
+};
+
+export const USP = ({ theme = 'default' }: USPProps) => {
+  const itemTitleClass =
+    theme === 'wwffyj'
+      ? 'font-alexandria text-[24px] font-bold leading-[28px] text-[#0F105F] lg:text-[30px] lg:leading-[36px]'
+      : 'text-[24px] font-bold leading-[28px] text-[#0F105F] lg:text-[30px] lg:leading-[36px]';
+
+  const sectionBgClass =
+    theme === 'wwffyj' ? 'bg-[#F9FAFB]' : 'bg-section-bg';
+
   return (
-    <section className="bg-section-bg" aria-labelledby="usp-heading">
+    <section className={sectionBgClass} aria-labelledby="usp-heading">
       <Container>
         <h2 id="usp-heading" className="sr-only">
           USP
@@ -23,7 +37,7 @@ export const USP = () => {
               key={item.title}
               className="rounded-xl bg-white px-5 py-6 lg:px-6 lg:py-8"
             >
-              <p className="text-[24px] font-bold leading-[28px] text-[#0F105F] lg:text-[30px] lg:leading-[36px]">
+              <p className={itemTitleClass}>
                 {item.title}
               </p>
               <p className="mt-1 text-[11px] leading-[20px] text-[#465469] lg:mt-2 lg:text-[16px] lg:leading-[21px]">

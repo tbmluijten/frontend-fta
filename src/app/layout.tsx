@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { inter, manrope } from '@/lib/fonts';
+import { alexandria, inter, manrope } from '@/lib/fonts';
 
 import './globals.css';
 import { Header, Footer } from '@/components/organisms';
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${manrope.variable} h-full antialiased`}
+      className={`${inter.variable} ${manrope.variable} ${alexandria.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-[#EFEFFF] font-sans">
         <Header />

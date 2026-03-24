@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import {
   ArrowRight,
   Button,
@@ -7,22 +9,189 @@ import {
   Gavel,
 } from '@/components/atoms';
 import { Media } from '@/components/molecules';
-import { PLACEHOLDER_IMAGE_URL } from '@/lib/constants';
+import {
+  PLACEHOLDER_IMAGE_URL,
+  WWFFYJ_HERO_IMAGE_SRC,
+  WWFFYJ_SOCIAL_AVATAR_URLS,
+} from '@/lib/constants';
+
+export type HeroTheme = 'default' | 'wwffyj';
 
 type HeroProps = {
+  theme?: HeroTheme;
   heroImageSrc?: string;
   heroImageAlt?: string;
+  /** wwffyj: override social proof copy */
+  socialProofStat?: string;
+  socialProofLabel?: string;
+  socialAvatarUrls?: readonly string[];
 };
 
+const WWFFYJ_TRUST_ITEMS = [
+  'Free',
+  'Confidential',
+  'No upfront costs',
+] as const;
+
+function WwffyjTrustCheckIcon() {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
+    >
+      <path
+        d="M15 4.5L6.75 12.75L3 9"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function WwffyjSocialProofCard({
+  stat,
+  label,
+  avatarUrls,
+}: {
+  stat: string;
+  label: string;
+  avatarUrls: readonly string[];
+}) {
+  return (
+    <div
+      className="absolute -bottom-8 left-1/2 z-20 w-[min(calc(100%-2rem),280px)] -translate-x-1/2 rounded-2xl border border-white/50 bg-white/35 p-4 shadow-xl shadow-black/10 backdrop-blur-xl backdrop-saturate-150 ring-1 ring-inset ring-white/25 lg:bottom-10 lg:left-10 lg:translate-x-0 lg:w-[min(100%,260px)]"
+      role="region"
+      aria-label="Social proof"
+    >
+      <div
+        className="-space-x-2 flex justify-center lg:justify-start"
+        aria-hidden
+      >
+        {avatarUrls.map((url) => (
+          <div
+            key={url}
+            className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-white"
+          >
+            <Image
+              src={url}
+              alt=""
+              width={40}
+              height={40}
+              className="size-10 object-cover"
+            />
+          </div>
+        ))}
+      </div>
+      <p className="mt-3 text-center font-alexandria text-2xl font-bold text-white lg:text-left">
+        {stat}
+      </p>
+      <p className="text-center text-sm font-medium text-white lg:text-left">
+        {label}
+      </p>
+    </div>
+  );
+}
+
 export const Hero = ({
-  heroImageSrc = PLACEHOLDER_IMAGE_URL,
-  heroImageAlt = 'Person seeking support',
+  theme = 'default',
+  heroImageSrc,
+  heroImageAlt,
+  socialProofStat = '15,000+',
+  socialProofLabel = 'Families Represented',
+  socialAvatarUrls = WWFFYJ_SOCIAL_AVATAR_URLS,
 }: HeroProps) => {
+  const imageSrc =
+    heroImageSrc ??
+    (theme === 'wwffyj' ? WWFFYJ_HERO_IMAGE_SRC : PLACEHOLDER_IMAGE_URL);
+  const imageAlt =
+    heroImageAlt ??
+    (theme === 'wwffyj'
+      ? 'Client in rural setting seeking justice'
+      : 'Person seeking support');
+
+  if (theme === 'wwffyj') {
+    return (
+      <section aria-labelledby="hero-heading" className="bg-white">
+        <Container className="pb-20 pt-[90px] md:pt-[140px]">
+          <div className="flex flex-col gap-12 lg:flex-row lg:items-center justify-between lg:gap-12">
+            <div className="flex flex-1 flex-col gap-6">
+              <span
+                className="inline-flex w-fit rounded-full px-4 py-1.5 text-sm font-bold text-[var(--color-wwffyj-badge-text)]"
+                style={{ backgroundColor: 'var(--color-wwffyj-badge-bg)' }}
+              >
+                Active Litigation 2025
+              </span>
+
+              <h1
+                id="hero-heading"
+                className="font-alexandria text-3xl leading-tight tracking-tight text-primary sm:text-4xl md:text-5xl"
+              >
+                <b>Harmed. Ignored. Left Without Answers.</b> You deserve
+                justice.
+              </h1>
+
+              <p className="max-w-lg text-lg leading-relaxed text-text-muted">
+                We&apos;re here to help you understand your rights and take the
+                next step — clearly, confidently, and at no cost to you.
+              </p>
+
+              <Button
+                variant="primary"
+                href="/case-review"
+                className="!rounded-md !border-0 !bg-[var(--color-wwffyj-cta)] !text-white !shadow-none hover:!bg-[var(--color-wwffyj-cta)]/90"
+              >
+                Start my free case review
+              </Button>
+
+              <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-text-muted">
+                {WWFFYJ_TRUST_ITEMS.map((label) => (
+                  <li key={label} className="flex items-center gap-2">
+                    <span className="text-accent">
+                      <WwffyjTrustCheckIcon />
+                    </span>
+                    {label}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="relative flex flex-1 flex-col pb-12 lg:pb-0">
+              <div className="relative mx-auto w-full max-w-[488px] lg:mx-0 lg:max-w-none">
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 z-0 hidden rounded-2xl lg:block"
+                />
+                <div className="relative z-10">
+                  <Media
+                    src={imageSrc}
+                    alt={imageAlt}
+                    desktopHeight={524}
+                    className="!border-2 !border-[var(--color-wwffyj-frame)] ml-auto"
+                  />
+                </div>
+                <WwffyjSocialProofCard
+                  stat={socialProofStat}
+                  label={socialProofLabel}
+                  avatarUrls={socialAvatarUrls}
+                />
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+    );
+  }
+
   return (
     <section aria-labelledby="hero-heading">
       <Container className="pt-[90px] md:pt-[110px]">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-12">
-          {/* Left: Content */}
           <div className="flex flex-1 flex-col gap-6">
             <span
               className="inline-flex w-fit rounded-full bg-badge-green-bg px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-primary-green"
@@ -39,7 +208,7 @@ export const Hero = ({
               <span className="relative inline-block text-primary-green">
                 Organizational Harm
                 <svg
-                className="hidden lg:block"
+                  className="hidden lg:block"
                   width="489"
                   height="10"
                   viewBox="0 0 489 10"
@@ -75,7 +244,6 @@ export const Hero = ({
             </div>
           </div>
 
-          {/* Right: Media with floating badges (parent for positioning) */}
           <div className="relative flex-1">
             <FloatingBadge
               title="Free"
@@ -91,7 +259,7 @@ export const Hero = ({
               variant="primary"
               position="bottom-right"
             />
-            <Media src={heroImageSrc} alt={heroImageAlt} desktopHeight={524} />
+            <Media src={imageSrc} alt={imageAlt} desktopHeight={524} />
           </div>
         </div>
       </Container>

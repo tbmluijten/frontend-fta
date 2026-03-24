@@ -17,6 +17,12 @@
   --color-stories-inactive: #E7EBEF;
   --color-stories-text-active: #0F105F;
   --color-stories-text-inactive: #0E1629;
+
+  /* wwffyj theme – hero badge, CTA, decorative frame */
+  --color-wwffyj-badge-bg: #fce8e8;
+  --color-wwffyj-badge-text: #9b1c1c;
+  --color-wwffyj-cta: #dc2626;
+  --color-wwffyj-frame: #f5b5bc;
 }
 
 @theme inline {
@@ -32,7 +38,14 @@
   --color-stories-inactive: var(--color-stories-inactive);
   --color-stories-text-active: var(--color-stories-text-active);
   --color-stories-text-inactive: var(--color-stories-text-inactive);
+  --color-wwffyj-badge-bg: var(--color-wwffyj-badge-bg);
+  --color-wwffyj-badge-text: var(--color-wwffyj-badge-text);
+  --color-wwffyj-cta: var(--color-wwffyj-cta);
+  --color-wwffyj-frame: var(--color-wwffyj-frame);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  /* Alexandria (next/font → --font-alexandria-raw on <html>) */
+  --font-alexandria: var(--font-alexandria-raw), ui-sans-serif, system-ui,
+    sans-serif;
   --font-mono: ui-monospace, monospace;
 }
 

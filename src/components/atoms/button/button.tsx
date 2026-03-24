@@ -51,7 +51,7 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const baseStyles =
-    'inline-flex items-center justify-center gap-2 font-bold rounded-2xl py-4 px-6 text-sm md:text-base transition-colors disabled:opacity-50 disabled:cursor-not-allowed';
+    'inline-flex w-fit max-w-full items-center justify-center gap-2 font-bold rounded-2xl py-4 px-6 text-sm md:text-base transition-colors disabled:opacity-50 disabled:cursor-not-allowed';
 
   const customStyle: React.CSSProperties = {
     ...(customColors?.backgroundColor && { backgroundColor: customColors.backgroundColor }),

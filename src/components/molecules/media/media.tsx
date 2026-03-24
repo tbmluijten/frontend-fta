@@ -8,6 +8,8 @@ type MediaProps = {
   desktopWidth?: number;
   /** Width 100%, height volgt aspect ratio (4:3) of desktopHeight indien gezet */
   fullWidth?: boolean;
+  /** Extra classes on the image frame (e.g. theme-specific border) */
+  className?: string;
 };
 
 export const Media = ({
@@ -16,6 +18,7 @@ export const Media = ({
   desktopHeight,
   desktopWidth = 488,
   fullWidth = false,
+  className = '',
 }: MediaProps) => {
   const height = desktopHeight ?? 400;
   const useFixedHeight = fullWidth && desktopHeight !== undefined;
@@ -29,7 +32,7 @@ export const Media = ({
 
   return (
     <div
-      className={`relative w-full overflow-hidden rounded-2xl border-[6px] border-[#889fd671] ${
+      className={`relative w-full overflow-hidden rounded-2xl border-[6px] border-[#889fd671] ${className} ${
         fullWidth
           ? `aspect-[4/3] ${useFixedHeight ? 'lg:aspect-auto lg:[height:var(--media-height)]' : ''}`
           : 'aspect-[4/3] lg:aspect-auto lg:[height:var(--media-height,524px)] lg:[width:var(--media-width,488px)]'

@@ -24,18 +24,42 @@ const ITEMS = [
   },
 ] as const;
 
-export const FAQ = () => {
+export type FAQTheme = 'default' | 'wwffyj';
+
+type FAQProps = {
+  theme?: FAQTheme;
+};
+
+export const FAQ = ({ theme = 'default' }: FAQProps) => {
   const baseId = useId();
   const [openIndex, setOpenIndex] = useState(0);
 
+  const titleClassName =
+    theme === 'wwffyj'
+      ? 'font-alexandria text-[30px] font-semibold leading-none text-[#0A3182] lg:text-[48px]'
+      : 'text-[30px] font-semibold leading-none text-[#0E1629]';
+
+  const questionHeadingClassName =
+    theme === 'wwffyj'
+      ? 'm-0 font-alexandria text-[18px] font-medium leading-none text-[#111827]'
+      : 'm-0 text-[18px] font-medium leading-none text-[#0A3182]';
+
+  const answerClassName =
+    theme === 'wwffyj'
+      ? 'pt-3 text-[16px] font-normal leading-6 text-[#4B5563] lg:pt-4 lg:leading-[27px]'
+      : 'pt-3 text-[16px] font-normal leading-6 text-[#465469] lg:pt-4 lg:leading-[27px]';
+
+  const chevronColorClass =
+    theme === 'wwffyj' ? 'text-[#111827]' : 'text-[#0A3182]';
+
+  const sectionClassName =
+    theme === 'wwffyj' ? 'bg-[#F9FAFB]' : 'bg-white';
+
   return (
-    <section className="bg-white" aria-labelledby="faq-heading">
+    <section className={sectionClassName} aria-labelledby="faq-heading">
       <Container>
         <div className="mx-auto max-w-[720px] text-center">
-          <h2
-            id="faq-heading"
-            className="text-[30px] font-semibold leading-none text-[#0E1629]"
-          >
+          <h2 id="faq-heading" className={titleClassName}>
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-[16px] font-normal leading-6 text-[#465469] lg:text-[18px] lg:leading-none">
@@ -55,7 +79,7 @@ export const FAQ = () => {
             return (
               <li key={item.question}>
                 <div className="rounded-xl border border-[#E2E8F0] bg-white px-5 py-4 lg:px-6 lg:py-5">
-                  <h3 className="m-0 text-[18px] font-medium leading-none text-[#0A3182]">
+                  <h3 className={questionHeadingClassName}>
                     <button
                       id={buttonId}
                       type="button"
@@ -68,7 +92,7 @@ export const FAQ = () => {
                     >
                       <span className="min-w-0 flex-1">{item.question}</span>
                       <span
-                        className={`mt-0.5 shrink-0 text-[#0A3182] transition-transform duration-300 ease-out ${
+                        className={`mt-0.5 shrink-0 ${chevronColorClass} transition-transform duration-300 ease-out ${
                           isOpen ? 'rotate-180' : 'rotate-0'
                         }`}
                         aria-hidden
@@ -87,7 +111,7 @@ export const FAQ = () => {
                   >
                     <div className="min-h-0 overflow-hidden">
                       {item.answer ? (
-                        <p className="pt-3 text-[16px] font-normal leading-6 text-[#465469] lg:pt-4 lg:leading-[27px]">
+                        <p className={answerClassName}>
                           {item.answer}
                         </p>
                       ) : null}
