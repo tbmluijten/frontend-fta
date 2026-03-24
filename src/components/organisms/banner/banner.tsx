@@ -19,7 +19,7 @@ const WWFFYJ_PRIMARY_BTN =
   '!rounded-md !border-0 !bg-[var(--color-wwffyj-cta)] !px-6 !py-4 !text-base !font-bold !text-white !shadow-none hover:!bg-[var(--color-wwffyj-cta)]/90';
 
 const WWFFYJ_SECONDARY_BTN =
-  '!rounded-md !border-2 !border-white !bg-white !px-6 !py-4 !text-base !font-bold !text-[var(--color-wwffyj-cta)] !shadow-none hover:!bg-white/95';
+  '!rounded-md !border-2 !border-[var(--color-wwffyj-cta)] !bg-white !px-6 !py-4 !text-base !font-bold !text-[var(--color-wwffyj-cta)] !shadow-none hover:!bg-[#F9FAFB]';
 
 export const Banner = ({
   variant = 'default',
@@ -69,19 +69,19 @@ export const Banner = ({
   if (isWwffyj) {
     return (
       <section
-        className="w-full bg-transparent px-4"
+        className="w-full bg-white px-4"
         aria-labelledby="support-banner-heading"
       >
         <div className="mx-auto w-full max-w-[1200px] py-6 md:py-10">
-          <div className="flex w-full flex-col gap-8 rounded-2xl bg-[#0A3182] px-6 py-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:px-12 lg:py-14">
-            <div className="flex min-w-0 flex-1 flex-col lg:max-w-[min(100%,36rem)]">
+          <div className="flex w-full flex-col gap-8 rounded-2xl border border-[#E5E7EB] bg-white px-6 py-10 shadow-sm lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:px-12 lg:py-14">
+            <div className="flex min-w-0 w-full max-w-[811px] flex-1 flex-col">
               <h2
                 id="support-banner-heading"
-                className="font-alexandria text-left text-[28px] font-bold leading-tight text-white sm:text-[32px] lg:text-[36px]"
+                className="font-alexandria text-left text-[28px] font-bold leading-tight text-[#0A3182] sm:text-[32px] lg:text-[36px]"
               >
                 {resolvedTitle}
               </h2>
-              <p className="mt-4 text-left text-[16px] font-normal leading-[26px] text-white/90 lg:mt-5 lg:text-[18px] lg:leading-[28px]">
+              <p className="mt-4 text-left text-[16px] font-normal leading-[26px] text-[#4B5563] lg:mt-5 lg:text-[18px] lg:leading-[28px]">
                 {resolvedDescription}
               </p>
             </div>

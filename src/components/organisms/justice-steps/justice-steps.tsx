@@ -1,5 +1,3 @@
-import { Fragment } from 'react';
-
 import { Container } from '@/components/atoms';
 
 const STEPS = [
@@ -60,40 +58,57 @@ export const JusticeSteps = () => {
         </div>
 
         <div
-          className="relative mx-auto mt-10 grid w-full max-w-[940px] gap-y-8 lg:mt-14"
-          style={{
-            gridTemplateColumns: '3rem minmax(0, 1fr)',
-            columnGap: '1.25rem',
-          }}
+          className="relative mx-auto mt-10 flex w-full max-w-[796px] flex-col lg:mt-14"
           role="list"
         >
           {STEPS.map((step, index) => {
             const isLast = index === STEPS.length - 1;
             return (
-              <Fragment key={step.id}>
+              <div
+                key={step.id}
+                className="grid w-full"
+                style={{
+                  gridTemplateColumns: '3rem minmax(0, 1fr)',
+                  columnGap: '1.25rem',
+                }}
+              >
                 <div className="flex h-full min-h-0 flex-col items-center">
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-[#0A3182] bg-white text-center text-[16px] font-bold tabular-nums leading-[1] text-[var(--color-wwffyj-cta)]">
                     {step.number}
                   </span>
                   {!isLast ? (
+                    <>
+                      <div
+                        className="mx-auto mt-2 w-px min-h-8 flex-1 bg-[#E5E7EB]"
+                        aria-hidden
+                      />
+                      <div
+                        className="h-8 w-px shrink-0 bg-[#E5E7EB] lg:h-12"
+                        aria-hidden
+                      />
+                    </>
+                  ) : null}
+                </div>
+                <div className="flex min-h-0 min-w-0 flex-col">
+                  <article
+                    className="min-w-0 rounded-2xl border border-[#E5E7EB] bg-white px-5 py-5 lg:px-6 lg:py-6"
+                    role="listitem"
+                  >
+                    <h3 className="font-alexandria text-[18px] font-medium leading-snug text-[#111827] lg:text-[24px] lg:font-semibold lg:leading-snug">
+                      {step.title}
+                    </h3>
+                    <p className="mt-2 text-[16px] font-normal leading-[26px] text-[#4B5563]">
+                      {step.description}
+                    </p>
+                  </article>
+                  {!isLast ? (
                     <div
-                      className="mt-2 w-px min-h-8 flex-1 bg-[#E5E7EB]"
+                      className="h-8 shrink-0 lg:h-12"
                       aria-hidden
                     />
                   ) : null}
                 </div>
-                <article
-                  className="min-w-0 rounded-2xl border border-[#E5E7EB] bg-white px-5 py-5 lg:px-6 lg:py-6"
-                  role="listitem"
-                >
-                  <h3 className="font-alexandria text-[18px] font-medium leading-snug text-[#111827] lg:text-[24px] lg:font-semibold lg:leading-snug">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-[16px] font-normal leading-[26px] text-[#4B5563]">
-                    {step.description}
-                  </p>
-                </article>
-              </Fragment>
+              </div>
             );
           })}
         </div>

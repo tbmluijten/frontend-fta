@@ -66,7 +66,7 @@ export const Stories = ({ theme = 'default' }: StoriesProps) => {
   const sectionClassName = 'bg-white';
 
   const titleClassName = isWwffyj
-    ? 'font-alexandria text-[30px] font-semibold leading-none text-[#111827] lg:text-[48px]'
+    ? 'font-alexandria text-[30px] font-semibold leading-none text-[#0A3182] lg:text-[48px]'
     : 'text-[32px] font-semibold leading-none tracking-tight text-stories-text-active';
 
   const slideTrackClassName = isWwffyj
