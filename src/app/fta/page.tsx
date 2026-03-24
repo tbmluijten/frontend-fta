@@ -1,5 +1,5 @@
 import { HomePageContent } from '@/components/templates';
 
-export default function Home() {
+export default function FtaPage() {
   return <HomePageContent />;
 }
