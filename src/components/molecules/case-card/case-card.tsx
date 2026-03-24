@@ -28,7 +28,7 @@ export const CaseCard = ({
             {title}
           </h3>
           <div className="min-h-0 flex-1" />
-          <p className="mt-[18px] shrink-0 text-left text-[16px] font-normal leading-[21px] text-white/90">
+          <p className="mt-[18px] line-clamp-3 shrink-0 text-left text-[16px] font-normal leading-[21px] text-white/90">
             {description}
           </p>
           <div className="min-h-[18px] shrink-0" />
@@ -54,7 +54,7 @@ export const CaseCard = ({
             {title}
           </h3>
           <div className="min-h-0 flex-1" />
-          <p className="mt-[18px] shrink-0 text-left text-[16px] font-normal leading-[21px] text-[#4B5563] transition-colors duration-500 ease-in-out group-hover:text-white/90">
+          <p className="mt-[18px] line-clamp-3 shrink-0 text-left text-[16px] font-normal leading-[21px] text-[#4B5563] transition-colors duration-500 ease-in-out group-hover:text-white/90">
             {description}
           </p>
           <div className="min-h-[18px] shrink-0" />
@@ -79,7 +79,7 @@ export const CaseCard = ({
           {title}
         </h3>
         <div className="min-h-0 flex-1" />
-        <p className="mt-[18px] shrink-0 text-left text-[16px] font-normal leading-[21px] text-text-muted transition-colors duration-500 ease-in-out group-hover:text-white/90">
+        <p className="mt-[18px] line-clamp-3 shrink-0 text-left text-[16px] font-normal leading-[21px] text-text-muted transition-colors duration-500 ease-in-out group-hover:text-white/90">
           {description}
         </p>
         <div className="min-h-[18px] shrink-0" />

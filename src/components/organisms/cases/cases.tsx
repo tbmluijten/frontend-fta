@@ -1,73 +1,7 @@
 import { Button, Container } from '@/components/atoms';
 import { CaseCard } from '@/components/molecules';
-import { PLACEHOLDER_IMAGE_URL } from '@/lib/constants';
 
-const CASES = [
-  {
-    id: '1',
-    title: 'Rideshare Abuse Uber & Lyft',
-    description:
-      'Abuse by rideshare drivers. Platforms and drivers held accountable.',
-    imageSrc: PLACEHOLDER_IMAGE_URL,
-    imageAlt: 'Woman in car looking at phone',
-  },
-  {
-    id: '2',
-    title: 'Institutional Abuse',
-    description:
-      'Abuse by rideshare drivers. Platforms and drivers held accountable.',
-    imageSrc: PLACEHOLDER_IMAGE_URL,
-    imageAlt: 'Young woman in classroom',
-  },
-  {
-    id: '3',
-    title: 'Clergy & Religious Organization Abuse',
-    description:
-      'Abuse by rideshare drivers. Platforms and drivers held accountable.',
-    imageSrc: PLACEHOLDER_IMAGE_URL,
-    imageAlt: 'Church setting',
-  },
-  {
-    id: '4',
-    title: 'Workplace Misconduct & Harassment',
-    description:
-      'Abuse by rideshare drivers. Platforms and drivers held accountable.',
-    imageSrc: PLACEHOLDER_IMAGE_URL,
-    imageAlt: 'Woman at desk',
-  },
-  {
-    id: '5',
-    title: 'Campus & University Sexual Assault',
-    description:
-      'Abuse by rideshare drivers. Platforms and drivers held accountable.',
-    imageSrc: PLACEHOLDER_IMAGE_URL,
-    imageAlt: 'Students with smartphone',
-  },
-  {
-    id: '6',
-    title: 'Medical Professional Misconduct',
-    description:
-      'Abuse by rideshare drivers. Platforms and drivers held accountable.',
-    imageSrc: PLACEHOLDER_IMAGE_URL,
-    imageAlt: 'Medical consultation',
-  },
-  {
-    id: '7',
-    title: 'Child Sexual Abuse (Historical Cases)',
-    description:
-      'Abuse by rideshare drivers. Platforms and drivers held accountable.',
-    imageSrc: PLACEHOLDER_IMAGE_URL,
-    imageAlt: 'Child alone',
-  },
-  {
-    id: '8',
-    title: 'Government Facility Abuse',
-    description:
-      'Abuse by rideshare drivers. Platforms and drivers held accountable.',
-    imageSrc: PLACEHOLDER_IMAGE_URL,
-    imageAlt: 'Damaged facility interior',
-  },
-] as const;
+import { CASE_ITEMS } from './data/case-items';
 
 export type CasesTheme = 'default' | 'wwffyj';
 
@@ -117,13 +51,23 @@ export const Cases = ({ theme = 'default' }: CasesProps) => {
             Cases We Handle
           </h2>
           <p className={introClassName}>
-            We help survivors navigate complex legal processes while ensuring
-            their voices are heard.
+            {theme === 'wwffyj' ? (
+              <>
+                We support individuals affected by negligence, dangerous
+                products, toxic exposure, abuse, and other harmful practices.
+                Explore the legal matters we&apos;re currently investigating.
+              </>
+            ) : (
+              <>
+                We help survivors navigate complex legal processes while
+                ensuring their voices are heard.
+              </>
+            )}
           </p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 lg:mt-16 lg:grid-cols-4">
-          {CASES.map((caseItem, index) => (
+          {CASE_ITEMS.map((caseItem, index) => (
             <CaseCard
               key={caseItem.id}
               title={caseItem.title}
