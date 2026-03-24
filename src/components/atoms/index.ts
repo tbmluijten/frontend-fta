@@ -1,5 +1,6 @@
 export { ArrowRight } from './icons/arrow-right';
 export { Button } from './button/button';
+export { ChevronDown } from './icons/chevron-down';
 export { Container } from './container/container';
 export { Document } from './icons/document';
 export { Example } from './example/example';

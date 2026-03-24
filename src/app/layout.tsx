@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { inter, manrope } from '@/lib/fonts';
 
 import './globals.css';
-import { Header } from '@/components/organisms';
+import { Header, Footer } from '@/components/organisms';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -20,10 +20,11 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${manrope.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-[#EFEFFF]">
+      <body className="flex min-h-full flex-col bg-[#EFEFFF] font-sans">
         <Header />
         {children}
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }

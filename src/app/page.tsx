@@ -1,9 +1,12 @@
 import {
+  Banner,
   Cases,
   CoreValues,
+  FAQ,
   Hero,
   HowItWorks,
   Stories,
+  USP,
 } from '@/components/organisms';
 
 export default function Home() {
@@ -15,6 +18,9 @@ export default function Home() {
         <HowItWorks />
         <Stories />
         <Cases />
+        <FAQ />
+        <USP />
+        <Banner />
       </main>
     </div>
   );
