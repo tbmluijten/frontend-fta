@@ -201,7 +201,7 @@ const StoryCard = ({ text, isActive, theme }: StoryCardProps) => {
   if (theme === 'wwffyj') {
     return (
       <div className="relative w-full rounded-2xl border border-[#E5E7EB] bg-white px-8 py-10 lg:px-[72px] lg:py-12">
-        <p className="text-center text-[20px] font-normal leading-[32px] text-[#111827] lg:text-[24px] lg:leading-[36px]">
+        <p className="text-center text-[20px] font-normal leading-[32px] text-[#111827]">
           &ldquo;{text}&rdquo;
         </p>
       </div>

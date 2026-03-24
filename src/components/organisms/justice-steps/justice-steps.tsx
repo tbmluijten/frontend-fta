@@ -6,21 +6,21 @@ const STEPS = [
     number: '01',
     title: 'Free Case Review',
     description:
-      'Share your story in a confidential, no-obligation conversation so we can understand your situation and how we may help.',
+      'Fill out our 2-minute eligibility form to see if your case qualifies for a potential settlement.',
   },
   {
     id: '02',
     number: '02',
-    title: 'Expert Case Analysis',
+    title: 'Legal Consultation',
     description:
-      'Our legal partners review the facts, identify viable claims, and outline clear options—without pressure or upfront cost.',
+      'Our specialized attorneys will review your history of exposure and medical records at no cost to you.',
   },
   {
     id: '03',
     number: '03',
-    title: 'Pursue Your Claim',
+    title: 'Secure Compensation',
     description:
-      'If you choose to move forward, we connect you with representation to seek accountability and the justice you deserve.',
+      'We fight the manufacturers in court to ensure you receive the maximum settlement allowed by law.',
   },
 ] as const;
 
@@ -47,13 +47,12 @@ export const JusticeSteps = () => {
             className="mt-4 font-alexandria text-[30px] font-semibold leading-none lg:text-[48px]"
           >
             <span className="block text-[#0A3182]">Your Path to Justice in</span>
-            <span className="mt-1 block text-[var(--color-wwffyj-cta)]">
+            <span className="mt-1 block text-wwffyj-cta">
               3 Simple Steps
             </span>
           </h2>
-          <p className="mt-4 text-[16px] font-normal leading-6 text-[#465469] lg:mt-5 lg:text-[18px] lg:leading-none">
-            A straightforward process designed to respect your privacy and give
-            you clarity at every stage.
+          <p className="mt-4 text-[16px] font-normal leading-6 text-[#465469] lg:mt-5 lg:text-[18px] max-w-[480px] mx-auto">
+          We’ve streamlined the legal process so you can focus on your health while we handle the heavy lifting.
           </p>
         </div>
 
