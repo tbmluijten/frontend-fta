@@ -1,6 +1,8 @@
 export const PLACEHOLDER_IMAGE_URL =
   'https://images.unsplash.com/photo-1773332611514-238856b76198?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
+export const FTA_HERO_IMAGE_SRC = '/hero/fta-hero.jpg';
+
 export const WWFFYJ_HERO_IMAGE_SRC = '/hero/wwffyj-hero.jpg';
 
 /** Small portraits for wwffyj hero social proof (Unsplash, allowed in next.config). */

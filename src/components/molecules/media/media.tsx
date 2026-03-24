@@ -8,6 +8,11 @@ type MediaProps = {
   desktopWidth?: number;
   /** Width 100%, height volgt aspect ratio (4:3) of desktopHeight indien gezet */
   fullWidth?: boolean;
+  /**
+   * Optional image drawn behind `src` inside the frame (same cover + fill stack).
+   * Visible e.g. with transparent foreground assets or at edges depending on crop.
+   */
+  frameBackgroundSrc?: string;
   /** Extra classes on the image frame (e.g. theme-specific border) */
   className?: string;
 };

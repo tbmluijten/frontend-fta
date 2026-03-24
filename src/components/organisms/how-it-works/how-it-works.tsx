@@ -71,7 +71,7 @@ export const HowItWorks = ({
 
   const mediaSlot = (
     <div className="w-full">
-      <Media src={imageSrc} alt={imageAlt} fullWidth={true} />
+      <Media src={"/core-values/core-values-bg.jpg"} alt={imageAlt} fullWidth={true} />
     </div>
   );
 

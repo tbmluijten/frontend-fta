@@ -4,18 +4,111 @@ import {
   ArrowRight,
   Button,
   Container,
-  Document,
   FloatingBadge,
-  Gavel,
 } from '@/components/atoms';
 import { Media } from '@/components/molecules';
 import {
-  PLACEHOLDER_IMAGE_URL,
+  FTA_HERO_IMAGE_SRC,
   WWFFYJ_HERO_IMAGE_SRC,
   WWFFYJ_SOCIAL_AVATAR_URLS,
 } from '@/lib/constants';
 
 export type HeroTheme = 'default' | 'wwffyj';
+
+/** FTA hero floating badges — `/public/icons/fta-hero/free-case-review.svg` */
+function HeroIconFreeCaseReview({ className = '' }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="30"
+      height="26"
+      viewBox="0 0 30 26"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
+    >
+      <path
+        d="M21.25 2.11182H8.75C7.36929 2.11182 6.25 3.05731 6.25 4.22364V21.1182C6.25 22.2846 7.36929 23.2301 8.75 23.2301H21.25C22.6307 23.2301 23.75 22.2846 23.75 21.1182V4.22364C23.75 3.05731 22.6307 2.11182 21.25 2.11182Z"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M18.75 14.7828H18.7625"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M11.25 6.33546H18.75"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M11.25 10.5591H18.75"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+/** `/public/icons/fta-hero/support.svg` */
+function HeroIconSurvivorsSupport({ className = '' }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="30"
+      height="30"
+      viewBox="0 0 30 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
+    >
+      <path
+        d="M17.501 16.25L7.02479 26.725C6.77856 26.9713 6.48623 27.1667 6.16448 27.3C5.84274 27.4333 5.49788 27.502 5.14961 27.5021C4.44623 27.5022 3.77161 27.2229 3.27416 26.7256C2.77672 26.2283 2.49719 25.5538 2.49707 24.8504C2.49695 24.147 2.77626 23.4724 3.27354 22.975L13.7535 12.4987"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M20 20L27.5 12.5"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M26.875 13.125L16.875 3.125"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M10 10L17.5 2.5"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M10.625 9.375L20.625 19.375"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 type HeroProps = {
   theme?: HeroTheme;
@@ -108,7 +201,7 @@ export const Hero = ({
 }: HeroProps) => {
   const imageSrc =
     heroImageSrc ??
-    (theme === 'wwffyj' ? WWFFYJ_HERO_IMAGE_SRC : PLACEHOLDER_IMAGE_URL);
+    (theme === 'wwffyj' ? WWFFYJ_HERO_IMAGE_SRC : FTA_HERO_IMAGE_SRC);
   const imageAlt =
     heroImageAlt ??
     (theme === 'wwffyj'
@@ -248,14 +341,18 @@ export const Hero = ({
             <FloatingBadge
               title="Free"
               subtitle="Case Review"
-              icon={<Document size={20} />}
+              icon={
+                <HeroIconFreeCaseReview className="h-[18px] w-[21px] md:h-5 md:w-6" />
+              }
               variant="green"
               position="top-left"
             />
             <FloatingBadge
               title="1000+"
               subtitle="Survivors supported"
-              icon={<Gavel size={20} />}
+              icon={
+                <HeroIconSurvivorsSupport className="size-[18px] md:size-5" />
+              }
               variant="primary"
               position="bottom-right"
             />
