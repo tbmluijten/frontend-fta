@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+@source '../**/*.php';
+
+:root {
+  --background: #efefff;
+  --foreground: #171717;
+  --color-primary: #0f105f;
+  --color-primary-green: #2d8a2e;
+  --color-text-muted: #4b5563;
+  --color-section-bg: #f5f7ff;
+  --color-accent: #3b82f6;
+  --color-badge-green-bg: #e8f5e9;
+  --color-stories-active: #d5f8d4;
+  --color-stories-inactive: #e7ebef;
+  --color-stories-text-active: #0f105f;
+  --color-stories-text-inactive: #0e1629;
+  --color-wwffyj-badge-bg: #fce8e8;
+  --color-wwffyj-badge-text: #9b1c1c;
+  --color-wwffyj-cta: #dc2626;
+  --color-wwffyj-frame: #f5b5bc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--color-primary);
+  --color-primary-green: var(--color-primary-green);
+  --color-text-muted: var(--color-text-muted);
+  --color-section-bg: var(--color-section-bg);
+  --color-accent: var(--color-accent);
+  --color-badge-green-bg: var(--color-badge-green-bg);
+  --color-stories-active: var(--color-stories-active);
+  --color-stories-inactive: var(--color-stories-inactive);
+  --color-stories-text-active: var(--color-stories-text-active);
+  --color-stories-text-inactive: var(--color-stories-text-inactive);
+  --color-wwffyj-badge-bg: var(--color-wwffyj-badge-bg);
+  --color-wwffyj-badge-text: var(--color-wwffyj-badge-text);
+  --color-wwffyj-cta: var(--color-wwffyj-cta);
+  --color-wwffyj-frame: var(--color-wwffyj-frame);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-alexandria: var(--font-alexandria-raw), ui-sans-serif, system-ui,
+    sans-serif;
+  --font-mono: ui-monospace, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
