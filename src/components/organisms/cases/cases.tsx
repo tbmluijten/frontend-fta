@@ -35,7 +35,8 @@ export const Cases = ({ theme = 'default' }: CasesProps) => {
 
   return (
     <section
-      className={sectionClassName}
+      id="cases"
+      className={`scroll-mt-24 ${sectionClassName}`}
       aria-labelledby="cases-heading"
     >
       <Container>
@@ -84,7 +85,7 @@ export const Cases = ({ theme = 'default' }: CasesProps) => {
           {theme === 'wwffyj' ? (
             <Button
               variant="primary"
-              href="/case-review"
+              href="#cases"
               className="!rounded-md !border-0 !bg-[var(--color-wwffyj-cta)] !text-white !shadow-none hover:!bg-[var(--color-wwffyj-cta)]/90"
             >
               Check My Eligibility

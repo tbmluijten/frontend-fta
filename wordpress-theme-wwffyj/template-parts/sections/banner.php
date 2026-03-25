@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
 			</div>
 			<div class="flex w-full shrink-0 flex-col items-start gap-3 lg:w-auto lg:min-w-[200px]">
 				<a
-					href="<?php echo wwffyj_landing_home('/case-review/'); ?>"
+					href="#cases"
 					class="inline-flex w-full items-center justify-center rounded-md border-0 bg-[var(--color-wwffyj-cta)] px-6 py-4 text-base font-bold text-white shadow-none transition-colors hover:bg-[var(--color-wwffyj-cta)]/90 lg:w-auto"
 				>
 					<?php esc_html_e('Check My Eligibility', 'wwffyj-landing'); ?>

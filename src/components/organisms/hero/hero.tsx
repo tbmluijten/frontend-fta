@@ -231,7 +231,7 @@ export const Hero = ({
 
               <p className="max-w-lg text-lg leading-relaxed text-text-muted">
                 We&apos;re here to help you understand your rights and take the
-                next step — clearly, confidently, and at no cost to you.
+                next step clearly, confidently, and at no cost to you.
               </p>
 
               <Button
@@ -325,7 +325,7 @@ export const Hero = ({
             <div className="flex flex-wrap gap-4">
               <Button
                 variant="primary"
-                href="/eligibility"
+                href="#cases"
                 icon={<ArrowRight />}
                 iconPosition="right"
               >

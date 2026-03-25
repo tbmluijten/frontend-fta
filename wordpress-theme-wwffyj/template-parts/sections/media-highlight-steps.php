@@ -47,7 +47,7 @@ $steps = array(
 					<?php esc_html_e('Abuse can happen in many forms, not just by people but also by products. We fight for everyone affected by such circumstances.', 'wwffyj-landing'); ?>
 				</p>
 				<a
-					href="<?php echo wwffyj_landing_home('/eligibility/'); ?>"
+					href="#cases"
 					class="hidden rounded-md border-0 bg-[var(--color-wwffyj-cta)] px-6 py-4 text-base font-bold text-white shadow-none transition-colors hover:bg-[var(--color-wwffyj-cta)]/90 lg:inline-flex"
 				>
 					<?php esc_html_e('Check My Eligibility', 'wwffyj-landing'); ?>

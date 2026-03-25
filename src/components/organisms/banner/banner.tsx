@@ -32,7 +32,8 @@ export const Banner = ({
 }: BannerProps) => {
   const isWwffyj = variant === 'wwffyj';
 
-  const resolvedPrimaryHref = primaryHref ?? '/case-review';
+  const resolvedPrimaryHref =
+    primaryHref ?? (isWwffyj ? '#cases' : '/case-review');
 
   const resolvedTitle =
     title ??

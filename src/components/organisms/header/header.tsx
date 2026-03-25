@@ -53,7 +53,7 @@ export const Header = () => {
         </Link>
         <Button
           variant="primary"
-          href={isWwffyjTheme ? '/eligibility' : '/case-review'}
+          href={isWwffyjTheme ? '#cases' : '/case-review'}
         >
           {isWwffyjTheme ? 'Check My Eligibility' : 'Free Case Review'}
         </Button>

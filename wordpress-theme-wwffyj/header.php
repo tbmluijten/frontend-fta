@@ -46,7 +46,7 @@ if (!defined('ABSPATH')) {
 			>
 		</a>
 		<a
-			href="<?php echo wwffyj_landing_home('/eligibility/'); ?>"
+			href="#cases"
 			class="inline-flex w-fit max-w-full items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-4 text-sm font-bold text-white shadow-[0_4px_14px_rgba(15,16,95,0.25)] transition-colors hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2 md:text-base"
 		>
 			<?php esc_html_e('Check My Eligibility', 'wwffyj-landing'); ?>

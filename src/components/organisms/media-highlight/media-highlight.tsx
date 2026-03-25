@@ -249,7 +249,7 @@ export const MediaHighlight = ({
 
               <Button
                 variant="primary"
-                href="/eligibility"
+                href="#cases"
                 className={`hidden lg:inline-flex ${WWFFYJ_BTN}`}
               >
                 Check My Eligibility
@@ -333,7 +333,7 @@ export const MediaHighlight = ({
               </h2>
 
               <p className="max-w-lg text-lg leading-relaxed text-[#111827]">
-                We&apos;re here for one reason — to make sure you have every
+                We&apos;re here for one reason, to make sure you have every
                 chance to get the justice you deserve. Our legal partners are
                 ready to review your situation at no cost and no pressure.
               </p>

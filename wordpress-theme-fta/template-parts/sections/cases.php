@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
 
 $items = fta_landing_case_items();
 ?>
-<section class="bg-section-bg" aria-labelledby="cases-heading">
+<section id="cases" class="scroll-mt-24 bg-section-bg" aria-labelledby="cases-heading">
 	<div class="mx-auto w-full max-w-[1200px] px-4 py-[40px] md:py-[70px]">
 		<div class="mx-auto max-w-[768px] text-center">
 			<span class="inline-flex rounded-full bg-badge-green-bg px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-primary-green" aria-hidden="true">

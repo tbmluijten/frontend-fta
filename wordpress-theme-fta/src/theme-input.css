@@ -2,6 +2,10 @@
 
 @source '../**/*.php';
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #efefff;
   --foreground: #171717;

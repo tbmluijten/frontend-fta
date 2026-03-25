@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
 
 $items = wwffyj_landing_case_items();
 ?>
-<section class="bg-transparent" aria-labelledby="cases-heading">
+<section id="cases" class="scroll-mt-24 bg-transparent" aria-labelledby="cases-heading">
 	<div class="mx-auto w-full max-w-[1200px] px-4 py-[40px] md:py-[70px]">
 		<div class="mx-auto max-w-[768px] text-center">
 			<span
@@ -79,7 +79,7 @@ $items = wwffyj_landing_case_items();
 		</div>
 		<div class="mt-12 flex flex-col items-center gap-4 text-center">
 			<a
-				href="<?php echo wwffyj_landing_home('/case-review/'); ?>"
+				href="#cases"
 				class="inline-flex rounded-md border-0 bg-[var(--color-wwffyj-cta)] px-6 py-4 text-base font-bold text-white shadow-none transition-colors hover:bg-[var(--color-wwffyj-cta)]/90"
 			>
 				<?php esc_html_e('Check My Eligibility', 'wwffyj-landing'); ?>
