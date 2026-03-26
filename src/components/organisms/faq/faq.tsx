@@ -12,15 +12,18 @@ const ITEMS = [
   },
   {
     question: '2. Will my identity remain confidential if I start a claim?',
-    answer: 'Our mission is to bring clear guidance for you. By simply filling out 1 minute form we can match you to the right experts. Our team carefully reviews your situation privately and securely.',
+    answer:
+      'Absolutely. Your privacy is our priority. Your information is 100% confidential and stored on secure servers. We only share your details with our trusted legal partners if you qualify and choose to move forward. You remain in control of your story at every step.',
   },
   {
     question: '3. Is there any cost to file a claim or hire an attorney?',
-    answer: 'Our mission is to bring clear guidance for you. By simply filling out 1 minute form we can match you to the right experts. Our team carefully reviews your situation privately and securely.',
+    answer:
+      'None. Your initial review is 100% free, and we work on a contingency basis. This means there are no upfront costs or hourly fees. Our legal partners only receive a fee if they successfully secure compensation for you. If you don't win, you don't pay.',
   },
   {
     question: '4. Can I still file a claim if the abuse happened years ago?',
-    answer: 'Our mission is to bring clear guidance for you. By simply filling out 1 minute form we can match you to the right experts. Our team carefully reviews your situation privately and securely.',
+    answer:
+      'Yes. Many states have extended or removed time limits for these types of cases, allowing survivors to seek justice decades later. The best way to know for sure is to complete our 1-minute eligibility check. Our team will privately review your timeline and let you know if you are eligible to move forward.',
   },
 ] as const;
 

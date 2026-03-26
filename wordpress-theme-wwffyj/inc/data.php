@@ -69,12 +69,15 @@ function wwffyj_landing_case_items(): array {
  * @return list<array{q: string, a: string}>
  */
 function wwffyj_landing_faq_items(): array {
-	$a = 'Our mission is to bring clear guidance for you. By simply filling out 1 minute form we can match you to the right experts. Our team carefully reviews your situation privately and securely.';
+	$a1 = 'Our mission is to bring clear guidance for you. By simply filling out 1 minute form we can match you to the right experts. Our team carefully reviews your situation privately and securely.';
+	$a2 = 'Absolutely. Your privacy is our priority. Your information is 100% confidential and stored on secure servers. We only share your details with our trusted legal partners if you qualify and choose to move forward. You remain in control of your story at every step.';
+	$a3 = "None. Your initial review is 100% free, and we work on a contingency basis. This means there are no upfront costs or hourly fees. Our legal partners only receive a fee if they successfully secure compensation for you. If you don't win, you don't pay.";
+	$a4 = 'Yes. Many states have extended or removed time limits for these types of cases, allowing survivors to seek justice decades later. The best way to know for sure is to complete our 1-minute eligibility check. Our team will privately review your timeline and let you know if you are eligible to move forward.';
 	return array(
-		array('q' => '1. How do I know if I qualify for a lawsuit?', 'a' => $a),
-		array('q' => '2. Will my identity remain confidential if I start a claim?', 'a' => $a),
-		array('q' => '3. Is there any cost to file a claim or hire an attorney?', 'a' => $a),
-		array('q' => '4. Can I still file a claim if the abuse happened years ago?', 'a' => $a),
+		array('q' => '1. How do I know if I qualify for a lawsuit?', 'a' => $a1),
+		array('q' => '2. Will my identity remain confidential if I start a claim?', 'a' => $a2),
+		array('q' => '3. Is there any cost to file a claim or hire an attorney?', 'a' => $a3),
+		array('q' => '4. Can I still file a claim if the abuse happened years ago?', 'a' => $a4),
 	);
 }
 
